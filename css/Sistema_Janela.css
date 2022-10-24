@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #CCCCCC;
+}
+
+body {
+    background: #FFF url("../img/plano-de-fundo.jpg") no-repeat right top fixed;
+}
+
+
+#menu #start {
+    display: flex;
+    width: 100px;
+    height: 30px;
+    background-color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+#menu-ativo {
+    width: 260px;
+    height: 360px;
+    background-color: #222;
+    position: absolute;
+    top: auto;
+    bottom: 50px;
+    border-top-right-radius: 15px;
+    opacity: 0.8;
+}
+
+#menu-ativo .intens-menu-ativo {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#menu-ativo .intens-menu-ativo.tabuada {
+    margin-top: 15px;
+}
+
+#menu-ativo .intens-menu-ativo:hover {
+    background-color: #555555;
+}
+
+
+#janela{
+    display: block;
+    width: 800px;
+    height: 585px;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+#janela #janela-titulo{
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    height: 30px;
+    border: 1px solid red;
+}
+#botoes-controle #fechar{
+    cursor: pointer;
+}
+#botoes-controle #fechar:hover{
+    font-weight: bold;
+}
+
+input#cep{
+
+}
+
+footer {
+    position: absolute;
+    top: auto;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 130px auto 300px;
+    opacity: 0.9;
+}

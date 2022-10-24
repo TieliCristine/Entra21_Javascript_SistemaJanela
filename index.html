@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Janela</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="css/Sistema_Janela.css" type="text/css" rel="stylesheet"/>
+    <script src="js/sistemaJanela.js" type="text/javascript"></script>
+    <script src="js/ajaxViaCep.js" type="text/javascript"></script>
+    <script src="js/ajaxIBGE.js" type="text/javascript"></script>
+</head>
+
+<body>
+<main>
+    <div id="menu-ativo">
+        <span class="intens-menu-ativo tabuada" onclick="abrirJanela(this)">Tabuada</span>
+        <span class="intens-menu-ativo imc" onclick="abrirJanela(this)">IMC</span>
+        <span class="intens-menu-ativo calc" onclick="abrirJanela(this)">Calculadora</span>
+        <span class="intens-menu-ativo ajax" onclick="abrirJanela(this)">Ajax - Via CEP</span>
+        <span class="intens-menu-ativo ibge" onclick="abrirJanela(this)">Ajax - IBGE</span>
+    </div>
+
+    <div id="janela">
+        <div id="janela-titulo">
+            <span id="icone"></span>
+            <span id="titulo"></span>
+            <span id="botoes-controle">
+                <span id="fechar" onclick="esconderElemento(('#janela'))">X</span>
+            </span>
+        </div>
+
+        <div id="janela-menu"></div>
+        <div id="janela-conteudo">
+            <div class="dados template"></div>
+        </div>
+        <div id="janela-status"></div>
+
+    </div>
+
+</main>
+<footer>
+
+    <div id="menu">
+        <span id="start" onclick="start()">Iniciar</span>
+    </div>
+
+    <div id="icones">icones</div>
+
+    <div id="utilitario">
+        <span id="relogio"></span>
+    </div>
+</footer>
+</body>
+<script>
+    $("#menu-ativo").hide();
+    $("#janela").hide();
+    //Ex. onclick jquery: $(".intens-menu-ativo.tabuada").on("click", ".classe  ou  #id", executaFuncaoTal);
+    setInterval(function () {
+        $("#relogio").text((new Date).toLocaleString().substr(11, 9));
+    }, 1000);
+</script>
+</html>
